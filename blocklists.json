@@ -1,0 +1,38 @@
+[
+    {
+        "name": "EasyList",
+        "slug": "easylist",
+        "url": "https://easylist.to/easylist/easylist.txt",
+        "description": "EasyList is the primary filter list that removes most adverts from international webpages, including unwanted frames, images and objects. It is the most popular list used by many ad blockers and forms the basis of over a dozen combination and supplementary filter lists."
+    },
+    {
+        "name": "EasyList Cookie List",
+        "slug": "easylist-cookie-list",
+        "url": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+        "description": "EasyList Cookie List blocks cookies banners, GDPR overlay windows and other privacy-related notices."
+    },
+    {
+        "name": "EasyPrivacy",
+        "slug": "easyprivacy",
+        "url": "https://easylist.to/easylist/easyprivacy.txt",
+        "description": "EasyPrivacy is an optional supplementary filter list that completely removes all forms of tracking from the internet, including web bugs, tracking scripts and information collectors, thereby protecting your personal data."
+    },
+    {
+        "name": "Fanboy's Annoyance List",
+        "slug": "fanboys-annoyance-list",
+        "url": "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
+        "description": "Fanboy's Annoyance List blocks Social Media content, in-page pop-ups and other annoyances; thereby substantially decreasing web page loading times and uncluttering them. EasyList Cookie List and Fanboy's Social Blocking List are already included, there is no need to subscribe to them if you already have Fanboy's Annoyance List."
+    },
+    {
+        "name": "Fanboy's Social Blocking List",
+        "slug": "fanboys-social-blocking-list",
+        "url": "https://easylist.to/easylist/fanboy-social.txt",
+        "description": "Fanboy's Social Blocking List solely removes Social Media content on web pages such as the Facebook like button and other widgets."
+    },
+    {
+        "name": "ABPindo",
+        "slug": "abpindo",
+        "url": "https://raw.githubusercontent.com/heradhis/indonesianadblockrules/master/subscriptions/abpindo.txt",
+        "description": "ABPindo is an affiliated filter list written by heradhis that specifically removes adverts on Indonesian language websites."
+    },
+]
