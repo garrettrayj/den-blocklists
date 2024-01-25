@@ -113,7 +113,7 @@ struct DenBlocklists: ParsableCommand {
             throw ProgramError.failedToWriteManifest
         }
         
-        print("Finished processing blocklists!")
+        print("Finished processing blocklists! \(manifestURL.absoluteString)")
     }
 }
 
