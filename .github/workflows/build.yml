@@ -21,4 +21,4 @@ jobs:
     - name: Add and Commit
       run: git add --all -v && git commit -m "Update blocklists."
     - name: Deploy
-      run: git subtree push --prefix Output origin gh-pages
+      run: git subtree push -f --prefix Output origin gh-pages
