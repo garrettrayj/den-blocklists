@@ -2,37 +2,190 @@
     {
         "name": "EasyList",
         "slug": "easylist",
-        "url": "https://easylist.to/easylist/easylist.txt",
-        "description": "EasyList is the primary filter list that removes most adverts from international webpages, including unwanted frames, images and objects. It is the most popular list used by many ad blockers and forms the basis of over a dozen combination and supplementary filter lists."
+        "description": "EasyList is the primary filter list that removes most adverts from international webpages, including unwanted frames, images and objects. It is the most popular list used by many ad blockers and forms the basis of over a dozen combination and supplementary filter lists.",
+        "sourceURL": "https://easylist.to/easylist/easylist.txt",
+        "supportURL": "https://github.com/easylist/easylist/issues/"
     },
     {
         "name": "EasyList Cookie List",
         "slug": "easylist-cookie-list",
-        "url": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
-        "description": "EasyList Cookie List blocks cookies banners, GDPR overlay windows and other privacy-related notices."
+        "description": "EasyList Cookie List blocks cookies banners, GDPR overlay windows and other privacy-related notices.",
+        "sourceURL": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+        "supportURL": "https://github.com/easylist/easylist/issues/"
     },
     {
         "name": "EasyPrivacy",
         "slug": "easyprivacy",
-        "url": "https://easylist.to/easylist/easyprivacy.txt",
-        "description": "EasyPrivacy is an optional supplementary filter list that completely removes all forms of tracking from the internet, including web bugs, tracking scripts and information collectors, thereby protecting your personal data."
+        "description": "EasyPrivacy is an optional supplementary filter list that completely removes all forms of tracking from the internet, including web bugs, tracking scripts and information collectors, thereby protecting your personal data.",
+        "sourceURL": "https://easylist.to/easylist/easyprivacy.txt",
+        "supportURL": "https://github.com/easylist/easylist/issues/"
     },
     {
         "name": "Fanboy's Annoyance List",
         "slug": "fanboys-annoyance-list",
-        "url": "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
-        "description": "Fanboy's Annoyance List blocks Social Media content, in-page pop-ups and other annoyances; thereby substantially decreasing web page loading times and uncluttering them. EasyList Cookie List and Fanboy's Social Blocking List are already included, there is no need to subscribe to them if you already have Fanboy's Annoyance List."
+        "description": "Fanboy's Annoyance List blocks Social Media content, in-page pop-ups and other annoyances; thereby substantially decreasing web page loading times and uncluttering them. EasyList Cookie List and Fanboy's Social Blocking List are already included, there is no need to subscribe to them if you already have Fanboy's Annoyance List.",
+        "sourceURL": "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
+        "supportURL": "https://github.com/easylist/easylist/issues/"
     },
     {
         "name": "Fanboy's Social Blocking List",
         "slug": "fanboys-social-blocking-list",
-        "url": "https://easylist.to/easylist/fanboy-social.txt",
-        "description": "Fanboy's Social Blocking List solely removes Social Media content on web pages such as the Facebook like button and other widgets."
+        "description": "Fanboy's Social Blocking List solely removes Social Media content on web pages such as the Facebook like button and other widgets.",
+        "sourceURL": "https://easylist.to/easylist/fanboy-social.txt",
+        "supportURL": "https://github.com/easylist/easylist/issues/"
     },
     {
         "name": "ABPindo",
         "slug": "abpindo",
-        "url": "https://raw.githubusercontent.com/heradhis/indonesianadblockrules/master/subscriptions/abpindo.txt",
-        "description": "ABPindo is an affiliated filter list written by heradhis that specifically removes adverts on Indonesian language websites."
+        "description": "ABPindo is an affiliated filter list written by heradhis that specifically removes adverts on Indonesian language websites.",
+        "sourceURL": "https://raw.githubusercontent.com/heradhis/indonesianadblockrules/master/subscriptions/abpindo.txt",
+        "supportURL": "https://github.com/ABPindo/indonesianadblockrules/issues"
+    },
+    {
+        "name": "ABPVN List",
+        "slug": "abpvn",
+        "description": "ABPVN List is an affiliated filter list written by Hoàng Rio that specifically removes adverts on Tiếng Việt language websites.",
+        "sourceURL": "https://abpvn.com/filter/abpvn-IPl6HE.txt",
+        "supportURL": "https://github.com/abpvn/abpvn/issues"
+    },
+    {
+        "name": "Bulgarian list",
+        "slug": "bulgarian-list",
+        "description": "Bulgarian list is an affiliated filter list written by Alex that specifically removes adverts on Bulgarian language websites.",
+        "sourceURL": "http://stanev.org/abp/adblock_bg.txt",
+        "supportURL": "https://github.com/RealEnder/adblockbg/issues"
+    },
+    {
+        "name": "Dandelion Sprout's Nordic Filters",
+        "slug": "nordic-filters",
+        "description": "Dandelion Sprout's Nordic Filters is an affiliated filter list written by Imre Kristoffer Eilertsen that specifically removes adverts on norsk, norsk, norsk, dansk, íslenska, føroyskt, kalaallisut, suomi language websites.",
+        "sourceURL": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersABP-Inclusion.txt",
+        "supportURL": "https://github.com/DandelionSprout/adfilt/issues"
+    },
+    {
+        "name": "EasyList China",
+        "slug": "easylist-china",
+        "description": "EasyList China is an affiliated filter list written by John and Li that specifically removes adverts on Chinese language websites.",
+        "sourceURL": "https://easylist-downloads.adblockplus.org/easylistchina.txt",
+        "supportURL": "https://github.com/easylist/easylistchina/issues"
+    },
+    {
+        "name": "EasyList Czech and Slovak",
+        "slug": "easylist-czech-slovak",
+        "description": "EasyList Czech and Slovak is an affiliated filter list written by tomasko126 that specifically removes adverts on Czech and Slovak language websites.",
+        "sourceURL": "https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt",
+        "supportURL": "https://github.com/tomasko126/easylistczechandslovak/issues"
+    },
+    {
+        "name": "EasyList Dutch",
+        "slug": "easylist-dutch",
+        "description": "EasyList Dutch is an affiliated filter list written by the EasyList author Famlam that specifically removes adverts on Dutch language websites.",
+        "sourceURL": "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
+        "supportURL": "https://github.com/easylist/easylistdutch/issues"
+    },
+    {
+        "name": "EasyList Germany",
+        "slug": "easylist-germany",
+        "description": "EasyList Germany is a filter list written by the EasyList authors MonztA, Famlam and Khrin that specifically removes adverts on German language websites.",
+        "sourceURL": "https://easylist.to/easylistgermany/easylistgermany.txt",
+        "supportURL": "https://github.com/easylist/easylistgermany/issues"
+    },
+    {
+        "name": "EasyList Hebrew",
+        "slug": "easylist-hebrew",
+        "description": "EasyList Hebrew is an affiliated filter list written by BsT that specifically removes adverts on Hebrew language websites.",
+        "sourceURL": "https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt",
+        "supportURL": "https://github.com/easylist/EasyListHebrew/issues"
+    },
+    {
+        "name": "EasyList Italy",
+        "slug": "easylist-italy",
+        "description": "EasyList Italy is a filter list written by the EasyList author Khrin that specifically removes adverts on Italian language websites.",
+        "sourceURL": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
+        "supportURL": "https://github.com/easylist/easylistitaly/issues"
+    },
+    {
+        "name": "EasyList Lithuania",
+        "slug": "easylist-lithuania",
+        "description": "EasyList Lithuania is an affiliated filter list written by Imre Kristoffer Eilertsen that specifically removes adverts on Lithuanian language websites.",
+        "sourceURL": "https://raw.githubusercontent.com/EasyList-Lithuania/easylist_lithuania/master/easylistlithuania.txt",
+        "supportURL": "https://github.com/EasyList-Lithuania/easylist_lithuania/issues"
+    },
+    {
+        "name": "EasyList Polish",
+        "slug": "easylist-polish",
+        "sourceURL": "https://easylist-downloads.adblockplus.org/easylistpolish.txt",
+        "description": "EasyList Polish is an affiliated filter list written by bartoszsobkowiak and mateuszfranckiewicz that specifically removes adverts on polski language websites.",
+        "supportURL": "https://github.com/easylistpolish/easylistpolish/issues"
+    },
+    {
+        "name": "EasyList Portuguese",
+        "slug": "easylist-portuguese",
+        "description": "EasyList Portuguese is an affiliated filter list written by Felippe Santos that specifically removes adverts on português language websites.",
+        "sourceURL": "https://easylist-downloads.adblockplus.org/easylistportuguese.txt",
+        "supportURL": "https://github.com/easylist/easylistportuguese/issues"
+    },
+    {
+        "name": "EasyList Spanish",
+        "slug": "easylist-spanish",
+        "description": "EasyList Spanish is an affiliated filter list written by Felippe Santos that specifically removes adverts on español language websites.",
+        "sourceURL": "https://easylist-downloads.adblockplus.org/easylistspanish.txt",
+        "supportURL": "https://github.com/easylist/easylistspanish/issues"
+    },
+    {
+        "name": "IndianList",
+        "slug": "indian-list",
+        "description": "IndianList is an affiliated filter list written by mediumkreation that specifically removes adverts on বাংলা (ভারত), ગુજરાતી (ભારત), भारतीय, ਪੰਜਾਬੀ (ਭਾਰਤ), অসমীয়া, मराठी, മലയാളം, తెలుగు, ಕನ್ನಡ, ଓଡ଼ିଆ, नेपाली, සිංහල language websites.",
+        "sourceURL": "https://easylist-downloads.adblockplus.org/indianlist.txt",
+        "supportURL": "https://github.com/mediumkreation/IndianList/issues"
+    },
+    {
+        "name": "KoreanList",
+        "slug": "korean-list",
+        "description": "KoreanList is an affiliated filter list written by Mark Choi that specifically removes adverts on 한국어 language websites.",
+        "sourceURL": "https://easylist-downloads.adblockplus.org/koreanlist.txt",
+        "supportURL": "https://github.com/easylist/KoreanList/issues"
+    },
+    {
+        "name": "Latvian List",
+        "slug": "latvian-list",
+        "description": "Latvian List is an affiliated filter list written by anonymous74100 that specifically removes adverts on Latvian language websites.",
+        "sourceURL": "https://raw.githubusercontent.com/Latvian-List/adblock-latvian/master/lists/latvian-list.txt",
+        "supportURL": "https://github.com/Latvian-List/adblock-latvian/issues"
+    },
+    {
+        "name": "Liste AR",
+        "slug": "liste-ar",
+        "description": "Liste AR is an affiliated filter list written by smed79 and Crits that specifically removes adverts on Arabic language websites.",
+        "sourceURL": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
+        "supportURL": "https://github.com/easylist/listear/issues"
+    },
+    {
+        "name": "Liste FR",
+        "slug": "liste-fr",
+        "description": "Liste FR is an affiliated filter list written by Lian, Crits and smed79 that specifically removes adverts on French language websites.",
+        "sourceURL": "https://easylist-downloads.adblockplus.org/liste_fr.txt",
+        "supportURL": "https://github.com/easylist/listefr/issues"
+    },
+    {
+        "name": "ROList",
+        "slug": "rolist",
+        "description": "ROList is an affiliated filter list written by MenetZ and Zoso that specifically removes adverts on românesc language websites.",
+        "sourceURL": "https://www.zoso.ro/pages/rolist.txt",
+        "supportURL": "https://zoso.ro/rolist/"
+    },
+    {
+        "name": "RU AdList",
+        "slug": "ru-adlist",
+        "description": "RU AdList is an affiliated filter list written by Lain_13 and dimisa that specifically removes adverts on русский, українська language websites.",
+        "sourceURL": "https://easylist-downloads.adblockplus.org/advblock.txt",
+        "supportURL": "https://github.com/easylist/ruadlist/issues"
+    },
+    {
+        "name": "Adblock Warning Removal List",
+        "slug": "anti-adblock-filters",
+        "description": "The Adblock Warning Removal List specifically removes obtrusive messages and warnings targeted to users who use an adblocker.",
+        "sourceURL": "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt",
+        "supportURL": "https://github.com/easylist/antiadblockfilters/issues"
     },
 ]

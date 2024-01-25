@@ -16,15 +16,17 @@ enum ProgramError: Error {
 struct Blocklist: Decodable {
     var name: String
     var slug: String
-    var url: URL
     var description: String
+    var sourceURL: URL
+    var supportURL: URL
 }
 
 struct Result: Encodable {
     var name: String
     var filename: String
-    var source: URL
     var description: String
+    var sourceURL: String
+    var supportURL: String
     var fetchSuccessful: Bool = false
     var conversionSuccessful: Bool = false
     var convertedCount: Int = 0
@@ -40,11 +42,12 @@ func convertBlocklist(_ blocklist: Blocklist, outputDirectoryURL: URL) -> Result
     var result = Result(
         name: blocklist.name,
         filename: outputFilename,
-        source: blocklist.url,
-        description: blocklist.description
+        description: blocklist.description,
+        sourceURL: blocklist.sourceURL.absoluteString,
+        supportURL: blocklist.supportURL.absoluteString
     )
   
-    guard let data = try? Data(contentsOf: blocklist.url) else { return result }
+    guard let data = try? Data(contentsOf: blocklist.sourceURL) else { return result }
     result.fetchSuccessful = true
     
     let rulesString = String(decoding: data, as: UTF8.self)
