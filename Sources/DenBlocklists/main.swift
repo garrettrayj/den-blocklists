@@ -72,7 +72,6 @@ func convertBlocklists(_ blocklists: [Blocklist], outputDirectoryURL: URL) -> [R
     }
 }
 
-@main
 struct DenBlocklists: ParsableCommand {
     @Argument var inputFile: String
     @Argument var outputDirectory: String
@@ -117,3 +116,5 @@ struct DenBlocklists: ParsableCommand {
         print("Finished processing blocklists!")
     }
 }
+
+DenBlocklists.main()
