@@ -18,7 +18,9 @@ jobs:
     steps:
     - uses: swift-actions/setup-swift@v1
     - uses: actions/checkout@v3
+	- name: Configure Git
+	  run: git config --global user.email "build@devsci.net" && git config --global user.name "Build Bot"
     - name: Build
       run: swift run DenBlocklists $PWD/blocklists.json $PWD/Output
     - name: Deploy
-      run: git subtree split --prefix Output -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages
+      run: git add --all -v && git commit -m "Update blocklists." && git subtree split --prefix Output -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages
