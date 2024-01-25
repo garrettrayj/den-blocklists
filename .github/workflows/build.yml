@@ -21,4 +21,4 @@ jobs:
     - name: Build
       run: swift run DenBlocklists $PWD/blocklists.json $PWD/Output
     - name: Deploy
-      run: git add --all -v && git commit -m "Update blocklists." && git subtree split --prefix Output -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages
+      run: git subtree split --prefix Output -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages
