@@ -1,4 +1,4 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 5.7.1
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -15,7 +15,8 @@ let package = Package(
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 .product(name: "ContentBlockerConverter", package: "SafariConverterLib")
-            ]
-        ),
+            ],
+            path: "Sources/DenBlocklists.swift"
+        )
     ]
 )
