@@ -1,3 +1,13 @@
+//
+//  main.swift
+//  DenBlocklists
+//
+//  Created by Garrett Johnson on 1/24/24.
+//  Copyright © 2023 Garrett Johnson
+//
+//  SPDX-License-Identifier: GPL-3.0-only
+//
+
 import Foundation
 #if os(Linux)
 import FoundationNetworking
