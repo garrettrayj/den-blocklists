@@ -24,41 +24,39 @@ enum ProgramError: Error {
 }
 
 struct Blocklist: Decodable {
+    var id: String
     var name: String
-    var slug: String
     var description: String
     var sourceURL: URL
     var supportURL: URL
 }
 
 struct Result: Encodable {
+    var id: String
     var name: String
-    var filename: String
     var description: String
-    var sourceURL: String
-    var supportURL: String
-    var fetchSuccessful: Bool = false
-    var conversionSuccessful: Bool = false
+    var convertedURL: URL
+    var sourceURL: URL
+    var supportURL: URL
     var convertedCount: Int = 0
     var errorsCount: Int = 0
-    var overLimit: Bool = false
 }
 
 let converter = ContentBlockerConverter()
 
-func convertBlocklist(_ blocklist: Blocklist, outputDirectoryURL: URL) -> Result {
-    let outputFilename = "\(blocklist.slug).json"
+func convertBlocklist(_ blocklist: Blocklist, outputDirectoryURL: URL) -> Result? {
+    let outputFilename = "\(blocklist.id).json"
     
     var result = Result(
+        id: blocklist.id,
         name: blocklist.name,
-        filename: outputFilename,
         description: blocklist.description,
-        sourceURL: blocklist.sourceURL.absoluteString,
-        supportURL: blocklist.supportURL.absoluteString
+        convertedURL: URL(string: "https://blocklists.den.io/\(outputFilename)")!,
+        sourceURL: blocklist.sourceURL,
+        supportURL: blocklist.supportURL
     )
   
-    guard let data = try? Data(contentsOf: blocklist.sourceURL) else { return result }
-    result.fetchSuccessful = true
+    guard let data = try? Data(contentsOf: blocklist.sourceURL) else { return nil }
     
     let rulesString = String(decoding: data, as: UTF8.self)
     let rulesArray = rulesString.split(whereSeparator: \.isNewline).map { String($0) }
@@ -71,19 +69,17 @@ func convertBlocklist(_ blocklist: Blocklist, outputDirectoryURL: URL) -> Result
             encoding: String.Encoding.utf8
         )
     } catch {
-        return result
+        return nil
     }
     
-    result.conversionSuccessful = true
     result.convertedCount = converterResult.convertedCount
     result.errorsCount = converterResult.errorsCount
-    result.overLimit = converterResult.overLimit
     
     return result
 }
 
 func convertBlocklists(_ blocklists: [Blocklist], outputDirectoryURL: URL) -> [Result] {
-    blocklists.map { blocklist in
+    blocklists.compactMap { blocklist in
         convertBlocklist(blocklist, outputDirectoryURL: outputDirectoryURL)
     }
 }
