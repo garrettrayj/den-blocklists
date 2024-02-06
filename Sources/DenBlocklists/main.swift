@@ -23,7 +23,7 @@ enum ProgramError: Error {
     case failedToWriteManifest
 }
 
-struct Blocklist: Decodable {
+struct SourceBlocklist: Decodable {
     var id: String
     var name: String
     var description: String
@@ -31,7 +31,14 @@ struct Blocklist: Decodable {
     var supportURL: URL
 }
 
-struct Result: Encodable {
+struct SourceCollection: Decodable {
+    var id: String
+    var name: String
+    var website: URL
+    var filterLists: [SourceBlocklist]
+}
+
+struct ManifestBlocklist: Encodable {
     var id: String
     var name: String
     var description: String
@@ -42,12 +49,19 @@ struct Result: Encodable {
     var errorsCount: Int = 0
 }
 
+struct ManifestCollection: Encodable {
+    var id: String
+    var name: String
+    var website: URL
+    var filterLists: [ManifestBlocklist]
+}
+
 let converter = ContentBlockerConverter()
 
-func convertBlocklist(_ blocklist: Blocklist, outputDirectoryURL: URL) -> Result? {
+func convertBlocklist(_ blocklist: SourceBlocklist, outputDirectoryURL: URL) -> ManifestBlocklist? {
     let outputFilename = "\(blocklist.id).json"
     
-    var result = Result(
+    var result = ManifestBlocklist(
         id: blocklist.id,
         name: blocklist.name,
         description: blocklist.description,
@@ -78,7 +92,7 @@ func convertBlocklist(_ blocklist: Blocklist, outputDirectoryURL: URL) -> Result
     return result
 }
 
-func convertBlocklists(_ blocklists: [Blocklist], outputDirectoryURL: URL) -> [Result] {
+func convertBlocklists(_ blocklists: [SourceBlocklist], outputDirectoryURL: URL) -> [ManifestBlocklist] {
     blocklists.compactMap { blocklist in
         convertBlocklist(blocklist, outputDirectoryURL: outputDirectoryURL)
     }
@@ -101,13 +115,27 @@ struct DenBlocklists: ParsableCommand {
         
         guard
             let data = try? Data(contentsOf: URL(fileURLWithPath: inputFile)),
-            let blocklists: [Blocklist] = try? JSONDecoder().decode([Blocklist].self, from: data)
+            let collections: [SourceCollection] = try? JSONDecoder().decode(
+                [SourceCollection].self,
+                from: data
+            )
         else {
             throw ProgramError.failedToLoadInputFile
         }
         
         // Process blocklists
-        let results = convertBlocklists(blocklists, outputDirectoryURL: outputDirectoryURL)
+        var results: [ManifestCollection] = []
+        for collection in collections {
+            results.append(ManifestCollection(
+                id: collection.id,
+                name: collection.name,
+                website: collection.website,
+                filterLists: convertBlocklists(
+                    collection.filterLists,
+                    outputDirectoryURL: outputDirectoryURL
+                )
+            ))
+        }
         
         // Write manifest file
         let manifestURL = outputDirectoryURL.appendingPathComponent("manifest.json")
